@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace challenge.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[Action]")]
     public class ChallengeController: ControllerBase
     {
         [HttpGet]
@@ -12,6 +12,13 @@ namespace challenge.Controllers
         {
             var service = new Iterations_BinaryGap();
             return service.BinaryGap(number);
+        }
+
+        [HttpPost]
+        public int[] CycleRotation(int[] A, int k)
+        {
+           var service = new CycleRotation();
+            return service.Rotate(A,k);
         }
         
     }
