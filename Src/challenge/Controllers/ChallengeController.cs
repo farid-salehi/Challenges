@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using challenge.Application;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,13 @@ namespace challenge.Controllers
         {
            var service = new CycleRotation();
             return service.Rotate(A,k);
+        }
+
+        [HttpPost]
+        public int OddOccurrencesInArray(int[] A)
+        {
+            var service = new OddOccurrencesInArray();
+            return service.solution(A);
         }
         
     }
