@@ -29,5 +29,12 @@ namespace challenge.Controllers
             return service.solution(A);
         }
         
+         [HttpPost]
+        public int FrogJmp(int X, int Y, int D)
+        {
+              var service = new FrogJmp();
+              return service.Solution(X,Y,D);
+        }
+        
     }
 }
