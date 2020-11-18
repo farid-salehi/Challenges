@@ -28,12 +28,19 @@ namespace challenge.Controllers
             var service = new OddOccurrencesInArray();
             return service.solution(A);
         }
-        
+
          [HttpPost]
         public int FrogJmp(int X, int Y, int D)
         {
               var service = new FrogJmp();
               return service.Solution(X,Y,D);
+        }
+
+        [HttpPost]
+        public int PermMissingElem(int[] A)
+        {
+            var service = new PermMissingElem();
+              return service.Solution(A);
         }
         
     }
