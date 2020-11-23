@@ -42,6 +42,14 @@ namespace challenge.Controllers
             var service = new PermMissingElem();
               return service.Solution(A);
         }
+
+        [HttpPost]
+        public double CurrencyConversion(string inputCurrency, string outputCurrency, double amount)
+        {
+              var service = new CurrencyConversion();
+              var res =  service.Convert(inputCurrency, outputCurrency, amount);
+              return res;
+        }
         
     }
 }
